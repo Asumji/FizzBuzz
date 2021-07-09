@@ -7,12 +7,17 @@ while True:
     count += 1
     by5 = count / 5
     by3 = count / 3
-    # print("by5: " + str(by5) + " by3: " + str(by3))
-    if (str(by3)[2] == "0" and str(by5)[2] == "0"):
+    by5 = str(by5)
+    by3 = str(by3)
+    
+    by5array = by5.split(".")
+    by3array = by3.split(".")
+    
+    if (by3array[1][0] == "0" and by5array[1][0] == "0"):
         print("FizzBuzz")
-    elif (str(by3)[2] == "0"):
+    elif (by3array[1][0] == "0"):
         print("Fizz")
-    elif (str(by5)[2] == "0"):
+    elif (by5array[1][0] == "0"):
         print("Buzz")
     else:
         print(count)
